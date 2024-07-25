@@ -11,7 +11,7 @@ const RecipeList = memo(({ recipes, onRecipeClick, selectedRecipe, loading }) =>
     ) 
     if (recipes.length === 0) return (
         <div className="recipe-list">
-           <MessageBox>No data</MessageBox>
+           <MessageBox>No Recipe found</MessageBox>
         </div>
     )
 
