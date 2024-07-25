@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import RecipeList from '../components/RecipeList';
 import RecipeDetails from '../components/RecipeDetails';
 import FilterComponent from '../components/Filter';
-import { debounce } from 'lodash';
 
 function HomeScreen() {
     const [recipes, setRecipes] = useState([]);
@@ -30,7 +29,7 @@ function HomeScreen() {
       }
     };
 
-    
+
      // Handles consecutive recipe searches, canceling previous requests
     const searchRecipes = useCallback(async (term) => {
         // If there's an ongoing request, abort it
