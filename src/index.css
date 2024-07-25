@@ -1,13 +1,239 @@
-body {
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  background: #f9f9f9 !important;
+  min-height: 100vh;
+}
+.content {
+  display: flex;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* // App.css */
+.app-container {
+  font-family: Arial, sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 60px 20px 60px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  margin: 0;
+}
+
+.search-bar {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 200px;
+}
+
+.add-recipe-button,
+.save-button {
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+}
+
+.recipe-list {
+  width: 30%;
+  min-height: 60vh;
+  background: white;
+  padding: 12px;
+}
+
+.recipe-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  cursor: pointer;
+  padding-bottom: 29px;
+  background: beige;
+  /* background: white; */
+  padding: 9px;
+  border-radius: 8px;
+  height: 64px;
+}
+
+.recipe-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+.recipe-header {
+  display: flex;
+}
+
+.recipe-name {
+  margin: 0;
+  font-weight: 200;
+  font-size: 14px;
+}
+.selected .recipe-name {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.recipe-description {
+  margin: 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.recipe-details {
+  width: 70%;
+  /* background-color: #f9f9f9; */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 60vh;
+}
+.recipe-details .tag {
+  background-color: #a749ff !important;
+  margin-top: 16px;
+  background: white;
+  padding: 5px;
+  border-radius: 2px;
+  margin-right: 6px;
+  font-size: 13px;
+  color: white;
+}
+.recipe-title {
+  margin-top: 0;
+  /* margin-bottom: 20px; */
+}
+
+.detail-image {
+  /* width: 100%; */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 20px;
+  padding-left: 30px;
+}
+
+.section-title {
+  margin-bottom: 10px;
+  margin-bottom: 3px;
+  margin-top: 15px;
+  font-size: 16px;
+}
+.section-bottom p {
+  font-size: 12px;
+}
+.list {
+  padding-left: 20px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.save-button {
+  margin-top: 20px;
+}
+/* filter */
+.filter-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sort-options {
+  display: flex;
+  gap: 10px;
+}
+
+.sort-options button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sort-options button.active {
+  background-color: #ff7f50;
+  color: white;
+}
+
+.search-bar {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 200px;
+}
+
+/* rating */
+/* Rating */
+.rating span {
+  color: #f0c040;
+  margin: 0.1rem;
+}
+
+/* react-loading-skeleton */
+.recipe-details .react-loading-skeleton {
+  margin-bottom: 12px;
+}
+
+/* mobile viee */
+@media screen and (max-width: 750px) {
+  .recipe-header {
+    display: block;
+  }
+  .app-container {
+    padding: 2px 18px 1px 8px;
+  }
+  .recipe-info {
+    display: none;
+  }
+  .recipe-info .tags {
+    display: none;
+  }
+  .recipe-list {
+    width: 92px;
+  }
+  .detail-image{
+    width: 100%;
+    height: 191px;
+  }
+  .section{
+    margin-left: 0px !important;
+    padding-left: 0px !important;
+  }
+}
+
+
+/* alert */
+
+.alert{
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+.alert-info{
+  color: #2020a0;
+  background-color: #e0e0ff;
 }
